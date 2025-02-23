@@ -1,0 +1,30 @@
+{
+  "name": "ammonia-web",
+  "type": "module",
+  "collaborators": [
+    "Michael Howell <michael@notriddle.com>"
+  ],
+  "description": "HTML Sanitization",
+  "version": "4.0.0",
+  "license": "MIT OR Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rust-ammonia/ammonia"
+  },
+  "files": [
+    "ammonia_bg.wasm",
+    "ammonia.js",
+    "ammonia.d.ts"
+  ],
+  "main": "ammonia.js",
+  "types": "ammonia.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ],
+  "keywords": [
+    "sanitization",
+    "html",
+    "security",
+    "xss"
+  ]
+}
