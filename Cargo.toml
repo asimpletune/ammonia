@@ -12,6 +12,9 @@ categories = [ "web-programming", "text-processing" ]
 edition = "2021"
 rust-version = "1.65"
 
+[lib]
+crate-type = ["cdylib", "rlib"]
+
 [dependencies]
 html5ever = "0.29"
 maplit = "1.0"
@@ -19,6 +22,7 @@ tendril = "0.4"
 url = "2"
 once_cell = "1.10"
 cssparser = "0.34.0"
+wasm-bindgen = "0.2.100"
 
 [dev-dependencies]
 version-sync = "0.9"

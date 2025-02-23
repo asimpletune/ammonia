@@ -2787,6 +2787,7 @@ where
 ///     let document = Builder::new()
 ///         .clean(input);
 ///     assert_eq!(document.to_string(), output);
+#[wasm_bindgen]
 pub struct Document(RcDom);
 
 impl Document {
@@ -2939,6 +2940,21 @@ impl From<Document> for String {
     fn from(document: Document) -> Self {
         document.to_string()
     }
+}
+
+use wasm_bindgen::prelude::*;
+
+/// TODO
+#[wasm_bindgen]
+pub fn clean_wasm(text: String, allowed_tags: Vec<String>) -> String {
+    // Convert Vec<String> into HashSet<&str>
+    let tag_set: HashSet<&str> = allowed_tags.iter().map(String::as_str).collect();
+
+    let mut binding = Builder::default();
+    let cleaner = binding.tags(tag_set);
+
+    // Example sanitized output (replace with actual input later)
+    cleaner.clean(&text).to_string()
 }
 
 #[cfg(test)]
