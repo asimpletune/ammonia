@@ -13,8 +13,9 @@
   },
   "files": [
     "ammonia_bg.wasm",
-    "ammonia.js",
-    "ammonia.d.ts"
+    "ammonia_bg.wasm.d.ts",
+    "ammonia.d.ts",
+    "ammonia.js"
   ],
   "main": "ammonia.js",
   "types": "ammonia.d.ts",
